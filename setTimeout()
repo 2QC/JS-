@@ -1,3 +1,4 @@
+//javascript是单线程。单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。
 <script type="text/javascript">
         console.log( "1" );
         setTimeout(function() {
@@ -12,3 +13,4 @@
         console.log( "5" );
 </script>
 // 15234
+//原理：尽管setTimeout的time延迟时间为0,浏览器会默认setTimeout以及ajax请求这一类的方法都是耗时程序（尽管可能不耗时），将其加入一个队列中，该队列是一个存储耗时程序的队列，在所有不耗时程序执行过后，再来依次执行该队列中的程序
